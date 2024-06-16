@@ -14,7 +14,7 @@
   - `lora_qwen_course1.json`: 用于QWEN模型微调的配置文件。
 - **utils**: 工具文件夹，包含数据处理和辅助脚本。
   - `data_preprocess.py`: 数据处理工具脚本。
-  - `news_collecting.py`: 新闻收集脚本
+  - `news_collecting.py`: 新闻收集脚本。
 - **inference_example.ipynb**: 推理示例Jupyter Notebook。
 - **README.md**: 项目说明文件。
 - **train.py**: 主训练脚本。
@@ -26,13 +26,7 @@
 
 2. 安装所需依赖:
 
-   环境说明：
-   - python: 3.10
-   - cuda: 11.3
-   - pytorch: 1.12.1
-   - bitsandbytes: 0.39
-
-   以下安装步骤仅为cuda<11.4特化。对于更高版本无需如此，请直接参考hugging face官网。
+   注：cuda<11.4请按以下安装步骤配置。
    ```bash
     conda create -n sft python=3.10 notebook
     activate sft
