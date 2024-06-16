@@ -37,6 +37,11 @@
    ```
    Note: 需要把bitsandbytes库中的__init__文件中if("usr/local")块注释掉
 
+   对于更高版本：
+   ```bash
+   conda env create -f environment.yml
+   ```
+
 ### 数据与模型准备
 
 #### 下载数据集
