@@ -13,7 +13,8 @@
   - `lora_llama_course2.json`: 用于第二个LLaMA模型微调的配置文件。
   - `lora_qwen_course1.json`: 用于QWEN模型微调的配置文件。
 - **utils**: 工具文件夹，包含数据处理和辅助脚本。
-  - `data_utils.py`: 数据处理工具脚本。
+  - `data_preprocess.py`: 数据处理工具脚本。
+  - `news_collecting.py`: 新闻收集脚本
 - **inference_example.ipynb**: 推理示例Jupyter Notebook。
 - **README.md**: 项目说明文件。
 - **train.py**: 主训练脚本。
