@@ -1,0 +1,43 @@
+{
+    "base": "llama",
+    "model_id": "models/Base/Llama3-Chinese-8B-Instruct",
+    "lora_path": "models/Lora/llama3_chinese_8b_lora_step1",
+    "new_lora_path": "models/Lora/llama3_chinese_8b_lora_step2",
+
+    "max_len": 384,
+    "sample_size": 1e4,
+    "dataset_settings": [
+        {
+            "path": "datasets/alpaca-data-gpt4-chinese",
+            "weight": 0.5,
+            "rename_mapping": {
+                "instruction_zh": "instruction",
+                "input_zh": "input",
+                "output_zh": "output"
+            }
+        },
+        {
+            "path": "datasets/FinCUGE-Instruction",
+            "weight": 0.5,
+            "filter_cols": ["FINFE","FINQA","FINNA"]
+        }
+    ],
+
+    
+    "training_args": {
+        "per_device_train_batch_size": 2,
+        "gradient_accumulation_steps": 4,
+        "learning_rate": 5e-5,
+        "fp16": true,
+        "logging_steps": 10,
+        "optim": "adamw_torch",
+        "weight_decay": 0.01,
+        "output_dir": "outputs/llama3_step2",
+        "num_train_epochs": 1,
+        "seed": 3047,
+        "save_steps": 200,
+        "eval_steps": 500,
+        "gradient_checkpointing": true,
+        "save_total_limit": 30
+    }
+}
