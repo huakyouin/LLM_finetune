@@ -25,9 +25,7 @@ def get_news_details(driver,url):
     driver.get(url)
     title = driver.find_element(By.CSS_SELECTOR,".newstitle").text.strip()
     time = driver.find_element(By.CSS_SELECTOR,".newsauthor .time").text.strip()
-    # content = " ".join([p.text.strip() for p in driver.find_elements(By.CSS_SELECTOR,".newstext p")])
     content = driver.find_element(By.CSS_SELECTOR,".newstext div").text.replace('\n', ' ')
-    
 
     return title,content,time
 
@@ -83,7 +81,7 @@ def crawl_stocks_and_save(news_base,start_date,end_date,stock_id_list):
 if __name__=="__main__":
     start_date, end_date = datetime(2024, 6, 1), datetime(2024, 6, 15)
     stock_codes = ["000001","000002","000003","000004"]
-    news_base = "stock_news"
+    news_base = "data/stock_news"
     os.makedirs(news_base,exist_ok=True)
     NUM_PROCS = 2
     pool = ProcessPool(NUM_PROCS)
