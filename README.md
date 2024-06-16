@@ -31,9 +31,9 @@
     conda create -n sft python=3.10 notebook
     activate sft
     conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3
-    pip install transformers accelerate trl bitsandbytes==0.39 scipy deepspeed hf_transfer modelscope -i https://pypi.tuna.tsinghua.edu.cn/simple
-    pip install transformers_stream_generator tiktoken -i https://pypi.tuna.tsinghua.edu.cn/simple
-    pip install peft --no-dependencies -i https://pypi.tuna.tsinghua.edu.cn/simple
+    pip install transformers accelerate trl bitsandbytes==0.39 scipy deepspeed hf_transfer modelscope 
+    pip install transformers_stream_generator tiktoken
+    pip install peft --no-dependencies 
    ```
    Note: 需要把bitsandbytes库中的__init__文件中if("usr/local")块注释掉
 

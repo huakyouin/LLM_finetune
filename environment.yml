@@ -12,7 +12,6 @@ dependencies:
   - argon2-cffi-bindings=21.2.0=py310h7f8727e_0
   - asttokens=2.0.5=pyhd3eb1b0_0
   - async-lru=2.0.4=py310h06a4308_0
-  - attrs=23.1.0=py310h06a4308_0
   - babel=2.11.0=py310h06a4308_0
   - beautifulsoup4=4.12.2=py310h06a4308_0
   - bleach=4.1.0=pyhd3eb1b0_0
@@ -125,6 +124,7 @@ dependencies:
     - aliyun-python-sdk-kms==2.16.3
     - annotated-types==0.7.0
     - async-timeout==4.0.3
+    - attrs==23.2.0
     - bitsandbytes==0.43.1
     - crcmod==1.7
     - cryptography==42.0.7
@@ -138,6 +138,7 @@ dependencies:
     - frozenlist==1.4.1
     - fsspec==2024.2.0
     - gast==0.5.4
+    - h11==0.14.0
     - hf-transfer==0.1.6
     - hjson==3.1.0
     - huggingface-hub==0.23.1
@@ -165,6 +166,7 @@ dependencies:
     - nvidia-nccl-cu11==2.19.3
     - nvidia-nvtx-cu11==11.8.86
     - oss2==2.18.5
+    - outcome==1.3.0.post0
     - pandas==2.2.2
     - pathos==0.3.2
     - peft==0.11.1
@@ -182,6 +184,7 @@ dependencies:
     - rich==13.7.1
     - safetensors==0.4.3
     - scipy==1.13.1
+    - selenium==4.21.0
     - shtab==1.7.1
     - simplejson==3.19.2
     - sortedcontainers==2.4.0
@@ -194,10 +197,13 @@ dependencies:
     - tqdm==4.66.4
     - transformers==4.41.1
     - transformers-stream-generator==0.0.5
+    - trio==0.25.1
+    - trio-websocket==0.11.1
     - triton==2.2.0
     - trl==0.8.6
     - tyro==0.8.4
     - tzdata==2024.1
+    - wsproto==1.2.0
     - xxhash==3.4.1
     - yapf==0.40.2
     - yarl==1.9.4
