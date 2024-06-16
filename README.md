@@ -17,7 +17,7 @@
   - `news_collecting.py`: 新闻收集脚本。
 - **inference_example.ipynb**: 推理示例Jupyter Notebook。
 - **README.md**: 项目说明文件。
-- **train.py**: 主训练脚本。
+- **train_lm.py**: 主训练llm的脚本。
 
 ## 使用方法
 
