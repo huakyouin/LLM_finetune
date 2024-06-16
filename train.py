@@ -10,7 +10,7 @@ from peft import get_peft_model, LoraConfig, TaskType, PeftModel,PeftConfig
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 from transformers.trainer_pt_utils import LabelSmoother
 
-from utils import data_utils
+from utils import data_to_tokenized_dataset
 
 IGNORE_TOKEN_ID = LabelSmoother.ignore_index
     
@@ -108,10 +108,10 @@ def main(config,resume):
     # preprocess dataset
     if config['base']=='qwen':
         tokenizer.pad_token_id = tokenizer.eod_id
-        train_dataset_tokenized = data_utils.preprocess_data_for_qwen(sources = train_dataset, tokenizer = tokenizer, max_len = config["max_len"] )
+        train_dataset_tokenized = data_preprocess.preprocess_data_for_qwen(sources = train_dataset, tokenizer = tokenizer, max_len = config["max_len"] )
     elif config['base']=='llama':
         tokenizer.pad_token = tokenizer.eos_token
-        train_dataset_tokenized = data_utils.preprocess_data_for_llama(sources = train_dataset, tokenizer = tokenizer, max_len = 512 )
+        train_dataset_tokenized = data_preprocess.preprocess_data_for_llama(sources = train_dataset, tokenizer = tokenizer, max_len = 512 )
     else:
         raise NotImplementedError("have not chose a base yet or not support for it.")
 

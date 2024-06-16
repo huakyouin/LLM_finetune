@@ -8,7 +8,7 @@
     "sample_size": 1e4,
     "dataset_settings": [
         {
-            "path": "datasets/alpaca-data-gpt4-chinese",
+            "path": "data/alpaca-data-gpt4-chinese",
             "weight": 0.5,
             "rename_mapping": {
                 "instruction_zh": "instruction",

@@ -1,4 +1,4 @@
-# 项目名称: loraSFT
+# 项目名称: LLM-SFT
 
 ## 项目简介
 本项目旨在通过LoRA（Low-Rank Adaptation）技术对不同的语言模型进行微调。项目包含数据集、模型、输出、设置和工具等文件夹。
@@ -48,8 +48,8 @@
 
 ```bash
 export HF_HUB_ENABLE_HF_TRANSFER=1
-huggingface-cli download --repo-type dataset --resume-download Maciel/FinCUGE-Instruction  --local-dir datasets --local-dir-use-symlinks False
-huggingface-cli download --repo-type dataset --resume-download silk-road/alpaca-data-gpt4-chinese  --local-dir datasets --local-dir-use-symlinks False
+huggingface-cli download --repo-type dataset --resume-download Maciel/FinCUGE-Instruction  --local-dir data --local-dir-use-symlinks False
+huggingface-cli download --repo-type dataset --resume-download silk-road/alpaca-data-gpt4-chinese  --local-dir data --local-dir-use-symlinks False
 ```
 
 #### 下载模型
